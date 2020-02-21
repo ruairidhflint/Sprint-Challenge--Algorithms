@@ -123,7 +123,7 @@ class SortingRobot:
 
             self.swap_item()
         # Check if we can move right! If we can, start the whole process again
-            if self.can_move_right() is True:
+            if self.can_move_right() is not True:
                 self.set_light_off()
             else:
                 self.move_right()
