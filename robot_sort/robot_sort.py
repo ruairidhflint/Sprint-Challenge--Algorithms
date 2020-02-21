@@ -101,7 +101,11 @@ class SortingRobot:
 
         # Pseudo
         # Turn light on
+        self.set_light_on()
+        # Use light as a while loop conditional
+        while self.light_is_on() == True:
         # Swap item at first position with none
+            self.swap_item()
         # If we can move right, move right.
         # Check if item we are holding is larger or smaller; if larger, swap
         # Continue until we can't move right any more.
@@ -112,7 +116,7 @@ class SortingRobot:
         # Check if we can move right! If we can, start the whole process again
         # if not, we can turn the light off and return the list as none has been used as a marker
         # and must be in the final position
-        
+
         pass
 
 
