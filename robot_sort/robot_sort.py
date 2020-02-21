@@ -98,6 +98,21 @@ class SortingRobot:
         # First item help is 'None' so we may have to go back and forth more than a regular bubble sort.
         # Efficiency must take less than a second (shouldn't be a problem)
         # Need a way of looping through the list multiple times. (Can use none as a marker?)
+
+        # Pseudo
+        # Turn light on
+        # Swap item at first position with none
+        # If we can move right, move right.
+        # Check if item we are holding is larger or smaller; if larger, swap
+        # Continue until we can't move right any more.
+
+        # Begin moving back left all the way until we reach None, which will be our first
+        # point. 
+        # Swap items with None again (?)
+        # Check if we can move right! If we can, start the whole process again
+        # if not, we can turn the light off and return the list as none has been used as a marker
+        # and must be in the final position
+        
         pass
 
 
