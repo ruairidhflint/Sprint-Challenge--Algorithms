@@ -102,12 +102,13 @@ class SortingRobot:
         # Pseudo
         # Turn light on
         self.set_light_on()
+
         # Use light as a while loop conditional
-        while self.light_is_on() == 'ON':
+        while self.light_is_on():
         # Swap item at first position with none
             self.swap_item()
         # If we can move right, move right.
-            while self.can_move_right() == True :
+            while self.can_move_right() == True:
                 self.move_right()
         # Check if item we are holding is larger or smaller; if larger, swap
                 if self.compare_item() == 1:
@@ -116,16 +117,16 @@ class SortingRobot:
 
         # Begin moving back left all the way until we reach None, which will be our first
         # point. 
-            while self.can_move_left() == True and self.compare_item != None:
+            while self.can_move_left() == True and self.compare_item() is not None:
                 self.move_left()
         # Swap items with None again (?)
 
             self.swap_item()
         # Check if we can move right! If we can, start the whole process again
-            if self.can_move_right() == True:
-                self.move_right()
-            else:
+            if self.can_move_right() is True:
                 self.set_light_off()
+            else:
+                self.move_right()
         # if not, we can turn the light off and return the list as none has been used as a marker
         # and must be in the final position
 
