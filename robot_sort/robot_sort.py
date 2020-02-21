@@ -93,10 +93,11 @@ class SortingRobot:
         return self._light == "ON"
 
     def sort(self):
-        """
-        Sort the robot's list.
-        """
-        # Fill this out
+        # Implement some sort of bubble sort algorithm
+        # Light can be used to dictate if any changes were made each pass
+        # First item help is 'None' so we may have to go back and forth more than a regular bubble sort.
+        # Efficiency must take less than a second (shouldn't be a problem)
+        # Need a way of looping through the list multiple times. (Can use none as a marker?)
         pass
 
 
